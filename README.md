@@ -27,7 +27,7 @@
 
 
 
-_The **Rare Gems** MVP is to make a full CRUD application both on the frontend and backend. 
+The **Rare Gems** MVP is to make a full CRUD application both on the frontend and backend. 
 
 ### Server (Back End) <!-- omit in toc -->
 
@@ -62,17 +62,16 @@ _The **Rare Gems** MVP is to make a full CRUD application both on the frontend a
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- _Reseach rare sneakers,_
+- _Create seed data._
+- _Full CRUD backend._
+- _Full CRUD frontend._
+- _Styling and moblie responsive._
 
 <br>
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
@@ -90,7 +89,7 @@ _The **Rare Gems** MVP is to make a full CRUD application both on the frontend a
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Full Figma Design](https://www.figma.com/file/JTkW27ssKKz5HH2N296WXh/Rare-Gems?node-id=0%3A1)
+[Figma_Design](https://www.figma.com/file/JTkW27ssKKz5HH2N296WXh/Rare-Gems?node-id=0%3A1)
 
 #### Component Tree
 
@@ -98,8 +97,6 @@ _The **Rare Gems** MVP is to make a full CRUD application both on the frontend a
 [Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
 
 #### Component Architecture
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
