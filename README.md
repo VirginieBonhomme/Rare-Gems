@@ -19,7 +19,7 @@
 
 ## Overview
 
-_**Rare Gems** is a web application that targets sneaker enthusiasts. Allowing users to share their interests in rare sneakers by allowing them to discovery rare sneakers or share and update their reviews on a rare shoe. 
+**Rare Gems** is a web application that targets sneaker enthusiasts. Allowing users to discover rare sneakers through a super rare curated sneaker databased back by research of past and current markets. This app also allows users to create update and delete their reviews on a rare shoe. 
 
 <br>
 
