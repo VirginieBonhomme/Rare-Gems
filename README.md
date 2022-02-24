@@ -94,7 +94,7 @@ The **Rare Gems** MVP is to make a full CRUD application both on the frontend an
 #### Component Tree
 
 
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+[Component Tree Sample](https://whimsical.com/rare-gems-42Wcq9LPWmQKUuvSnRQoUc)
 
 #### Component Architecture
 
