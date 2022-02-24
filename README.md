@@ -108,7 +108,22 @@ src
 |__ components/
       |__ Header.jsx
       |__ Footer.jsx
+      |__ Navbar.jsx
+      |__ Card.jsx
+      |__ LoginForm.jsx
+      |__ Signup.jsx
+|__ Layouts/
+      |__ Layout.jsx
 |__ services/
+|__ Screens/
+      |__ ReveiwCreate.jsx
+      |__ ReveiwEdit.jsx
+      |__ ReveiwDelete.jsx
+      |__ ReveiwDetail.jsx
+      |__ Reveiws.jsx
+      
+
+
 
 ```
 
