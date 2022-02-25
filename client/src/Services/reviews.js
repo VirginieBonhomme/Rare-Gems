@@ -1,6 +1,6 @@
 import { api } from './apiConfig.js'
 
-export const getProductReviews = async (sneaker_id) => {
+export const getSneakerReviews = async (sneaker_id) => {
   const resp = await api.get(`/sneakers/${sneaker_id}/reviews`)
   return resp.data
 }
