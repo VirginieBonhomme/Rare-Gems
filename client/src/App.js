@@ -6,11 +6,14 @@ import SneakersContainer from './Containers/SneakerContainer.jsx';
 import Navbar from './Componets/Navbar';
 import Login from './Componets/Login';
 import Signup from './Componets/Signup';
+import HomeScreen from './Screens/HomeScreen';
+// import HomeScreen from './Screens/HomeScreen';
 
 
 function App() {
 
   const [currentUser, setCurrentUser] = useState(null)
+  // const [sneakers, setSneakers] = useState([])
 
   useEffect(() => {
     const getUser = async () => {
@@ -27,11 +30,12 @@ function App() {
 
 
 
+
   return (
     <div className="App">
       <Navbar currentUser={currentUser} logout={logout} />
       <Routes>
-        <Route path='/' element={<h1>Yerrrrr!!</h1>} />
+        <Route path='/' element={<HomeScreen />} />
         <Route path='/login' element={<Login setCurrentUser={setCurrentUser} />} />
         <Route path='/signup' element={<Signup setCurrentUser={setCurrentUser} />} />
         <Route path='/Sneakers/*' element={<SneakersContainer currentUser={currentUser} />} />

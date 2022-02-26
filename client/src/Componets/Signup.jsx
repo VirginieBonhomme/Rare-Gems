@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { registerUser } from '../Services/users'
+import { signupUser } from '../Services/users'
 import { useNavigate } from 'react-router-dom'
 
 export default function Register(props) {
@@ -17,10 +17,10 @@ export default function Register(props) {
         email,
         password
       }
-      const resp = await registerUser(user)
+      const resp = await signupUser(user)
       props.setCurrentUser(resp)
 
-      navigate('/')
+      navigate('/sneakers')
 
     }}>
       <input type='text' onChange={(e) => setUsername(e.target.value)} value={username} />
