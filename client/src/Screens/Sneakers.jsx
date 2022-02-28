@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Sneakers(props) {
   return (
-    <div class="grid grid-cols-3 gap-10 my-10">
+    <div class="flex flex-wrap justify-center items-center">
       {
         props.sneakers.map(sneaker => (
           <div class="w-60 p-2 m-4 bg-white rounded-xl transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">

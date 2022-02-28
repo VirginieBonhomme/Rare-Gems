@@ -44,7 +44,7 @@ function App() {
         <Route path='/Sneakers/*' element={<SneakersContainer currentUser={currentUser} />} />
         <Route path="/Sneakers/:id" element={<SneakerDetail />} />
         <Route path="Sneakers/:id/edit" element={<ReviewEdit />} />
-        <Route path="Sneakers/:id/create" element={<ReviewCreate />} />
+        {/* <Route path="Sneakers/:id/create" element={<ReviewCreate />} /> */}
       </Routes>
     </div>
   );

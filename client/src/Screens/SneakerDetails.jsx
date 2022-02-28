@@ -46,26 +46,32 @@ export default function SneakerDetail(props) {
 
 
   return (
-    <div className=" lg:h-screen lg:items-center">
+    <div className=" lg:h-screen lg:items-center content-center">
 
       {
         sneaker?.id ?
           <>
-            <div>
-              <img class="object-scale-down h-96 w-full" src={sneaker.img_url} alt="" />
-            </div>
-            <div class="max-w-lg mx-auto text-center p-5 lg:text-left lg:py-24">
-              <h2>{sneaker.name}</h2>
-              <br />
-              <h3>How Rare: {sneaker.how_rare} Stars</h3>
-              <br />
-              <h3>Orignal Release Date: {sneaker.release_date}</h3>
-              <br />
-              <h3>Retail: {sneaker.retail}</h3>
-              <br />
-              <h3>Resale: {sneaker.resale}</h3>
-              <br />
-              <p>History: {sneaker.description}</p>
+            <div class="flex flex-wrap justify-center mt-20 p-10 items-center">
+              <div>
+                <img class="object-scale-down h-96 w-full" src={sneaker.img_url} alt="" />
+              </div>
+              <div>
+                <div class="max-w-lg mx-auto text-center p-5 lg:text-left lg:py-24">
+                  <div class="max-w-lg mx-auto bg-white p-5 lg:text-left ">
+                    <h2>{sneaker.name}</h2>
+                    <br />
+                    <h3>How Rare: {sneaker.how_rare} Stars</h3>
+                    <br />
+                    <h3>Orignal Release Date: {sneaker.release_date}</h3>
+                    <br />
+                    <h3>Retail: {sneaker.retail}</h3>
+                    <br />
+                    <h3>Resale: {sneaker.resale}</h3>
+                    <br />
+                    <p>History: {sneaker.description}</p>
+                  </div>
+                </div>
+              </div>
             </div>
             {
               props.currentUser?.id === sneaker.user_id ?
@@ -78,9 +84,9 @@ export default function SneakerDetail(props) {
                 :
                 null
             }
-            <Link to={`/sneakers/${sneaker.id}/create`}>
-              <button>Add a review</button>
-            </Link>
+
+            <createReview />
+
             <Reviews
               currentUser={props.currentUser}
               reviews={reviews}
