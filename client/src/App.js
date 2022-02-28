@@ -42,8 +42,7 @@ function App() {
         <Route path='/login' element={<Login setCurrentUser={setCurrentUser} />} />
         <Route path='/signup' element={<Signup setCurrentUser={setCurrentUser} />} />
         <Route path='/Sneakers/*' element={<SneakersContainer currentUser={currentUser} />} />
-        <Route path="/Sneakers/:id" element={<SneakerDetail />} />
-        <Route path="Sneakers/:id/edit" element={<ReviewEdit />} />
+        <Route path="/Sneakers/:id" element={<SneakerDetail currentUser={currentUser} />} />
         {/* <Route path="Sneakers/:id/create" element={<ReviewCreate />} /> */}
       </Routes>
     </div>

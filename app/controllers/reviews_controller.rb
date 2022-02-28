@@ -5,7 +5,7 @@ class ReviewsController < ApplicationController
   # GET /reviews
   def index
     @sneaker = Sneaker.find(params[:sneaker_id])
-    @reviews = @product.reviews
+    @reviews = @sneaker.reviews
 
     render json: @reviews, include: :user
   end

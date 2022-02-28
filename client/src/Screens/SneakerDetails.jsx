@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { getOneSneaker } from '../Services/sneakers'
 import { getSneakerReviews, createReview, deleteReview } from '../Services/reviews'
 import Reviews from './ReviewScreens/Reviews'
+import ReviewCreate from './ReviewScreens/ReviewCreate'
 
 
 
@@ -39,8 +40,8 @@ export default function SneakerDetail(props) {
     setToggle(prevToggle => !prevToggle)
   }
 
-  const handleReviewDelete = async (review_id) => {
-    await deleteReview(id, review_id)
+  const handleReviewDelete = async (sneaker_id, review_id) => {
+    await deleteReview(sneaker_id, review_id)
     setToggle(prevToggle => !prevToggle)
   }
 
@@ -73,25 +74,14 @@ export default function SneakerDetail(props) {
                 </div>
               </div>
             </div>
-            {
-              props.currentUser?.id === sneaker.user_id ?
-                <>
-                  <Link to={`/sneakers/${sneaker.id}/edit`}>
-                    <button>Edit Review</button>
-                  </Link>
-                  <button onClick={() => props.handleDelete(sneaker.id)}>Delete Review</button>
-                </>
-                :
-                null
-            }
-
-            <createReview />
 
             <Reviews
               currentUser={props.currentUser}
               reviews={reviews}
               handleReviewDelete={handleReviewDelete}
+              sneaker={sneaker}
             />
+            <ReviewCreate handleReviewCreate={handleReviewCreate} />
           </>
           :
           <h3>Sorry, no sneaker found.</h3>
