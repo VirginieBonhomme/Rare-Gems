@@ -9,6 +9,7 @@ import Signup from './Componets/Signup';
 import HomeScreen from './Screens/HomeScreen';
 import SneakerDetail from './Screens/SneakerDetails';
 import ReviewEdit from './Screens/ReviewScreens/ReviewEdit'
+import ReviewCreate from './Screens/ReviewScreens/ReviewCreate';
 // import HomeScreen from './Screens/HomeScreen';
 
 
@@ -42,7 +43,8 @@ function App() {
         <Route path='/signup' element={<Signup setCurrentUser={setCurrentUser} />} />
         <Route path='/Sneakers/*' element={<SneakersContainer currentUser={currentUser} />} />
         <Route path="/Sneakers/:id" element={<SneakerDetail />} />
-        <Route path="Sneakers/:id/reviews/edit" element={<ReviewEdit />} />
+        <Route path="Sneakers/:id/edit" element={<ReviewEdit />} />
+        <Route path="Sneakers/:id/create" element={<ReviewCreate />} />
       </Routes>
     </div>
   );

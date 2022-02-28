@@ -16,9 +16,9 @@ export default function Reviews(props) {
             {
               props.currentUser?.id === review.user_id ?
                 <>
-                  <button>Edit</button>
+                  <button>Edit Review</button>
                   <button>
-                    Delete
+                    Delete Review
                   </button>
                 </>
                 :

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import Sneakers from '../Sneakers'
 
 export default function ReviewEdit(props) {
 
@@ -22,31 +23,33 @@ export default function ReviewEdit(props) {
   }, [id, props.reviews])
 
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault()
-      const reviews = {
-        title,
-        worth_it,
-        content
-      }
-      props.handleEdit(id, reviews)
-    }}>
-      <input
-        type='text'
-        onChange={(e) => setTitle(e.target.value)}
-        value={title}
-      />
-      <input
-        type='number'
-        onChange={(e) => setWorth_It(e.target.valueAsNumber)}
-        value={worth_it}
-      />
-      <input
-        type='text'
-        onChange={(e) => setContent(e.target.value)}
-        value={content}
-      />
-      <button>Edit</button>
-    </form>
+    <div>
+      <form onSubmit={(e) => {
+        e.preventDefault()
+        const reviews = {
+          title,
+          worth_it,
+          content
+        }
+        props.handleEdit(id, reviews)
+      }}>
+        <input
+          type='text'
+          onChange={(e) => setTitle(e.target.value)}
+          value={title}
+        />
+        <input
+          type='number'
+          onChange={(e) => setWorth_It(e.target.valueAsNumber)}
+          value={worth_it}
+        />
+        <input
+          type='text'
+          onChange={(e) => setContent(e.target.value)}
+          value={content}
+        />
+        <button>Edit</button>
+      </form>
+    </div>
   )
 }

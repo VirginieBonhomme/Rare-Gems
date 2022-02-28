@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { getOneSneaker } from '../Services/sneakers'
-import { getSneakerReviews, createReview, } from '../Services/reviews'
+import { getSneakerReviews, createReview, deleteReview } from '../Services/reviews'
 import Reviews from './ReviewScreens/Reviews'
-import ReviewCreate from './ReviewScreens/ReviewCreate'
+
 
 
 export default function SneakerDetail(props) {
@@ -15,6 +15,11 @@ export default function SneakerDetail(props) {
   const { id } = useParams()
 
   useEffect(() => {
+
+    // const foundSneaker = props.sneakers.find(sneaker => {
+    //   return sneaker.id === parseInt(id)
+    // })
+
     const fetchSneaker = async () => {
       const sneaker = await getOneSneaker(id)
       setSneaker(sneaker)
@@ -27,10 +32,15 @@ export default function SneakerDetail(props) {
     }
     fetchReviews()
     setSneaker()
-  }, [id, props.sneakers])
+  }, [id, props.sneakers, toggle])
 
   const handleReviewCreate = async (formData) => {
     await createReview(id, formData)
+    setToggle(prevToggle => !prevToggle)
+  }
+
+  const handleReviewDelete = async (review_id) => {
+    await deleteReview(id, review_id)
     setToggle(prevToggle => !prevToggle)
   }
 
@@ -57,15 +67,29 @@ export default function SneakerDetail(props) {
               <br />
               <p>History: {sneaker.description}</p>
             </div>
+            {
+              props.currentUser?.id === sneaker.user_id ?
+                <>
+                  <Link to={`/sneakers/${sneaker.id}/edit`}>
+                    <button>Edit Review</button>
+                  </Link>
+                  <button onClick={() => props.handleDelete(sneaker.id)}>Delete Review</button>
+                </>
+                :
+                null
+            }
+            <Link to={`/sneakers/${sneaker.id}/create`}>
+              <button>Add a review</button>
+            </Link>
+            <Reviews
+              currentUser={props.currentUser}
+              reviews={reviews}
+              handleReviewDelete={handleReviewDelete}
+            />
           </>
           :
-          <h3>Sorry, no product found.</h3>
+          <h3>Sorry, no sneaker found.</h3>
       }
-      <Reviews
-        currentUser={props.currentUser}
-        reviews={reviews}
-      />
-      <ReviewCreate handleReviewCreate={handleReviewCreate} />
 
     </div>
   )

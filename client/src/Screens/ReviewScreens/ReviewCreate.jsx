@@ -18,7 +18,7 @@ export default function ReviewCreate(props) {
     }}>
       <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
       <input type='number' value={worth_it} onChange={(e) => setWorth_it(e.target.valueAsNumber)} />
-      <input type='text' value={content} onChange={(e) => setContent(e.target.value)} />
+      <input type='textarea' value={content} onChange={(e) => setContent(e.target.value)} />
       <button>Drop a gem!</button>
     </form>
   )
