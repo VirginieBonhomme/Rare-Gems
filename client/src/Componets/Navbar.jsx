@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
   return (
-    <div className="flex space-x-4 flex-row-reverse px-10 ">
+    <div className="bg-gray-800 text-white items-baseline space-x-4 h-16">
       {props.currentUser ?
         <>
           <h3 className="text-3xl ">Welcome, {props.currentUser.username}!</h3>

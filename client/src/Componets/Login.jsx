@@ -9,7 +9,7 @@ export default function Login(props) {
   const navigate = useNavigate()
 
   return (
-    <form onSubmit={async (e) => {
+    <form class="bg-black shadow-md rounded px-8 pt-6 pb-8 mt-40 flex flex-col" onSubmit={async (e) => {
       e.preventDefault()
       const user = {
         username,
@@ -21,9 +21,22 @@ export default function Login(props) {
       navigate('/sneakers')
 
     }}>
-      <input type='text' onChange={(e) => setUsername(e.target.value)} value={username} />
-      <input type='password' onChange={(e) => setPassword(e.target.value)} value={password} />
-      <button>Login</button>
+      <input
+        class="shadow appearance-none border mt-5 rounded w-full py-2 px-3 text-grey-darker" id="username"
+        type="text"
+        placeholder="Username"
+        onChange={(e) => setUsername(e.target.value)}
+        value={username} />
+      <input
+        class="shadow appearance-none border border-red mt-5 rounded w-full py-2 px-3 text-grey-darker mb-3"
+        id="password"
+        type="password"
+        placeholder="******************"
+        onChange={(e) => setPassword(e.target.value)}
+        value={password} />
+      <button
+        class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
+      >Login</button>
     </form>
   )
 }

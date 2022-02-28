@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get '/users/:user_id/reviews', to: 'reviews#get_all_reviews'
   get '/sneakers', to: 'sneakers#get_all_sneakers'
+  # get '/sneakers/sneakers_id/details', to: 'sneakers#one_sneakers'
+
 
   post '/auth/login', to: 'authentications#login'
   get '/auth/verify', to: 'authentications#verify'

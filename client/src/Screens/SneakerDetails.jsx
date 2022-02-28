@@ -1,72 +1,73 @@
 import { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
-import { getSneakerReviews, deleteReview } from '../Services/reviews'
-import Reviews from './Reviews'
-// import ReviewCreate from './ReviewCreate'
+import { useParams } from 'react-router-dom'
+import { getOneSneaker } from '../Services/sneakers'
+import { getSneakerReviews, createReview, } from '../Services/reviews'
+import Reviews from './ReviewScreens/Reviews'
+import ReviewCreate from './ReviewScreens/ReviewCreate'
+
 
 export default function SneakerDetail(props) {
 
+
   const [sneaker, setSneaker] = useState({})
   const [reviews, setReviews] = useState([])
-  // const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false)
   const { id } = useParams()
 
   useEffect(() => {
-    const foundSneaker = props.snakers.find(sneaker => {
-      return sneaker.id === parseInt(id)
-    })
+    const fetchSneaker = async () => {
+      const sneaker = await getOneSneaker(id)
+      setSneaker(sneaker)
+    }
+    fetchSneaker()
+
     const fetchReviews = async () => {
       const reviews = await getSneakerReviews(id)
       setReviews(reviews)
     }
     fetchReviews()
-    setSneaker(foundSneaker)
-  }, [id, props.sneakers, toggle])
+    setSneaker()
+  }, [id, props.sneakers])
 
-  // const handleReviewCreate = async (formData) => {
-  //   await createReview(id, formData)
-  //   setToggle(prevToggle => !prevToggle)
-  // }
-
-  const handleReviewDelete = async (review_id) => {
-    await deleteReview(id, review_id)
+  const handleReviewCreate = async (formData) => {
+    await createReview(id, formData)
     setToggle(prevToggle => !prevToggle)
   }
 
+
   return (
-    <div>
+    <div className=" lg:h-screen lg:items-center">
+
       {
         sneaker?.id ?
           <>
-            <img src={sneaker.img_url} />
-            <h2>{sneaker.name}</h2>
-            <h3>${sneaker.how_rare}</h3>
-            <h3>${sneaker.release_date}</h3>
-            <h3>${sneaker.retail}</h3>
-            <h3>${sneaker.resale}</h3>
-            <p>{sneaker.description}</p>
-
-            {
-              props.currentUser?.id === sneaker.user_id ?
-                <>
-                  <Link to={`/sneakers/${sneaker.id}/edit`}>
-                    <button>Edit</button>
-                  </Link>
-                  <button onClick={() => props.handleDelete(sneaker.id)}>Delete</button>
-                </>
-                :
-                null
-            }
-            {/* <ReviewCreate handleReviewCreate={handleReviewCreate} /> */}
-            <Reviews
-              currentUser={props.currentUser}
-              reviews={reviews}
-              handleReviewDelete={handleReviewDelete}
-            />
+            <div>
+              <img class="object-scale-down h-96 w-full" src={sneaker.img_url} alt="" />
+            </div>
+            <div class="max-w-lg mx-auto text-center p-5 lg:text-left lg:py-24">
+              <h2>{sneaker.name}</h2>
+              <br />
+              <h3>How Rare: {sneaker.how_rare} Stars</h3>
+              <br />
+              <h3>Orignal Release Date: {sneaker.release_date}</h3>
+              <br />
+              <h3>Retail: {sneaker.retail}</h3>
+              <br />
+              <h3>Resale: {sneaker.resale}</h3>
+              <br />
+              <p>History: {sneaker.description}</p>
+            </div>
           </>
           :
           <h3>Sorry, no product found.</h3>
       }
+      <Reviews
+        currentUser={props.currentUser}
+        reviews={reviews}
+      />
+      <ReviewCreate handleReviewCreate={handleReviewCreate} />
+
     </div>
   )
 }
+

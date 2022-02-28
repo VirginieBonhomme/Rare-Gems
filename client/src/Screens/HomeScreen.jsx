@@ -21,8 +21,7 @@ export default function HomeScreen(props) {
     <div>
       <Routes>
         <Route path='/' element={
-          <Sneakers
-          />
+          <Sneakers />
         } />
       </Routes>
     </div>

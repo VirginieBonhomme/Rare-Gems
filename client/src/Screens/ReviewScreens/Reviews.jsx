@@ -1,3 +1,5 @@
+
+
 import React from 'react'
 
 export default function Reviews(props) {
@@ -15,7 +17,7 @@ export default function Reviews(props) {
               props.currentUser?.id === review.user_id ?
                 <>
                   <button>Edit</button>
-                  <button onClick={() => props.handleReviewDelete(review.id)}>
+                  <button>
                     Delete
                   </button>
                 </>

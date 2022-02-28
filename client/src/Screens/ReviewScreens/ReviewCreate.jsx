@@ -3,7 +3,7 @@ import { useState } from 'react'
 export default function ReviewCreate(props) {
 
   const [title, setTitle] = useState('')
-  const [stars, setStars] = useState(0)
+  const [worth_it, setWorth_it] = useState(0)
   const [content, setContent] = useState('')
 
   return (
@@ -11,15 +11,15 @@ export default function ReviewCreate(props) {
       e.preventDefault()
       const review = {
         title,
-        stars,
+        worth_it,
         content
       }
       props.handleReviewCreate(review)
     }}>
       <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
-      <input type='number' value={stars} onChange={(e) => setStars(e.target.valueAsNumber)} />
+      <input type='number' value={worth_it} onChange={(e) => setWorth_it(e.target.valueAsNumber)} />
       <input type='text' value={content} onChange={(e) => setContent(e.target.value)} />
-      <button>Review it!</button>
+      <button>Drop a gem!</button>
     </form>
   )
 }
