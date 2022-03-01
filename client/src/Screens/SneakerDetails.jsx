@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { getOneSneaker } from '../Services/sneakers'
-import { getSneakerReviews, createReview, deleteReview } from '../Services/reviews'
+import { getSneakerReviews, createReview, deleteReview, updateReview } from '../Services/reviews'
 import Reviews from './ReviewScreens/Reviews'
 import ReviewCreate from './ReviewScreens/ReviewCreate'
 
@@ -14,6 +14,7 @@ export default function SneakerDetail(props) {
   const [reviews, setReviews] = useState([])
   const [toggle, setToggle] = useState(false)
   const { id } = useParams()
+
 
   useEffect(() => {
 
@@ -44,6 +45,8 @@ export default function SneakerDetail(props) {
     await deleteReview(sneaker_id, review_id)
     setToggle(prevToggle => !prevToggle)
   }
+
+
 
 
   return (
@@ -81,7 +84,12 @@ export default function SneakerDetail(props) {
               handleReviewDelete={handleReviewDelete}
               sneaker={sneaker}
             />
-            <ReviewCreate handleReviewCreate={handleReviewCreate} />
+            <ReviewCreate
+              handleReviewCreate={handleReviewCreate}
+              currentUser={props.currentUser}
+
+
+            />
           </>
           :
           <h3>Sorry, no sneaker found.</h3>

@@ -10,7 +10,7 @@ export default function Reviews(props) {
           props.reviews.map(review => (
             <div key={review.id}>
               <h3>{review.title}</h3>
-              <h4>Author: {review.user.username}</h4>
+              <h4>Username: {review.user.username}</h4>
               <h5>{review.worth_it} stars</h5>
               <p>{review.content}</p>
 

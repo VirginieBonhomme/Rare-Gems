@@ -43,7 +43,7 @@ function App() {
         <Route path='/signup' element={<Signup setCurrentUser={setCurrentUser} />} />
         <Route path='/Sneakers/*' element={<SneakersContainer currentUser={currentUser} />} />
         <Route path="/Sneakers/:id" element={<SneakerDetail currentUser={currentUser} />} />
-        {/* <Route path="Sneakers/:id/create" element={<ReviewCreate />} /> */}
+        <Route path="/Sneakers/:id/edit" element={<ReviewEdit currentUser={currentUser} />} />
       </Routes>
     </div>
   );

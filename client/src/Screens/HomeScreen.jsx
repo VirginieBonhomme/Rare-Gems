@@ -18,7 +18,7 @@ export default function HomeScreen(props) {
 
 
   return (
-    <div class="flex flex-wrap justify-center items-center">
+    <div class="grid grid-cols-3 gap-10 my-10">
       <Routes>
         <Route path='/' element={
           <Sneakers />
