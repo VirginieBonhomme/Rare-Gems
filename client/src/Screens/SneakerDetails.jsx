@@ -9,7 +9,7 @@ import ReviewCreate from './ReviewScreens/ReviewCreate'
 
 export default function SneakerDetail(props) {
 
-
+  const [create, setCreate] = useState(true)
   const [sneaker, setSneaker] = useState({})
   const [reviews, setReviews] = useState([])
   const [toggle, setToggle] = useState(false)
@@ -83,12 +83,15 @@ export default function SneakerDetail(props) {
               reviews={reviews}
               handleReviewDelete={handleReviewDelete}
               sneaker={sneaker}
+              setCreate={setCreate}
+              create={create}
+              setToggle={setToggle}
             />
             <ReviewCreate
               handleReviewCreate={handleReviewCreate}
               currentUser={props.currentUser}
-
-
+              setCreate={setCreate}
+              create={create}
             />
           </>
           :
