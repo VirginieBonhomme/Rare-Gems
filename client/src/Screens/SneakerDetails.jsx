@@ -57,12 +57,13 @@ export default function SneakerDetail(props) {
           <>
             <div class="flex flex-wrap justify-center mt-20 p-10 items-center">
               <div>
+                <h2>{sneaker.name}</h2>
                 <img class="object-scale-down h-96 w-full" src={sneaker.img_url} alt="" />
+                <h3>{sneaker.how_rare} Stars</h3>
               </div>
               <div>
                 <div class="max-w-lg mx-auto text-center p-5 lg:text-left lg:py-24">
                   <div class="max-w-lg mx-auto bg-white p-5 lg:text-left ">
-                    <h2>{sneaker.name}</h2>
                     <br />
                     <h3>How Rare: {sneaker.how_rare} Stars</h3>
                     <br />
