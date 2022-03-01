@@ -17,10 +17,19 @@ export default function ReviewCreate(props) {
           content
         }
         props.handleReviewCreate(review)
-      }}>
+      }}> <br />
+        <label>Review Title</label>
+        <br />
         <input type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
+        <br />
+        <label>Worth The Flip</label>
+        <br />
         <input type='number' value={worth_it} onChange={(e) => setWorth_it(e.target.valueAsNumber)} />
+        <br />
+        <label>Review</label>
+        <br />
         <input type='textarea' value={content} onChange={(e) => setContent(e.target.value)} />
+        <br />
         <button>Drop a gem!</button>
       </form>
     </div>

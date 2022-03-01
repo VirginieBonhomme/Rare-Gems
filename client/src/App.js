@@ -10,6 +10,7 @@ import HomeScreen from './Screens/HomeScreen';
 import SneakerDetail from './Screens/SneakerDetails';
 import ReviewEdit from './Screens/ReviewScreens/ReviewEdit'
 import ReviewCreate from './Screens/ReviewScreens/ReviewCreate';
+import Footer from './Componets/Footer';
 // import HomeScreen from './Screens/HomeScreen';
 
 
@@ -45,6 +46,7 @@ function App() {
         <Route path="/Sneakers/:id" element={<SneakerDetail currentUser={currentUser} />} />
         <Route path="/Sneakers/:id/edit" element={<ReviewEdit currentUser={currentUser} />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

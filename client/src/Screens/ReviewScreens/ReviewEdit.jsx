@@ -40,17 +40,25 @@ export default function ReviewEdit(props) {
       }
       handleEdit(id, props.review.id, review)
     }}>
-      <input
+      <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Review Title</label>
+      <br />
+      <input className="block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         type='text'
         onChange={(e) => { setTitle(e.target.value) }}
         value={title}
       />
-      <input
+      <br />
+      <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Worth The Flip?</label>
+      <br />
+      <input className="block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         type='number'
         onChange={(e) => { setWorth_it(e.target.valueAsNumber) }}
         value={worth_it}
       />
-      <input
+      <br />
+      <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Review</label>
+      <br />
+      <input className="block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         type='text'
         onChange={(e) => { setContent(e.target.value) }}
         value={content}

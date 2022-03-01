@@ -10,7 +10,7 @@ function OneReview(props) {
   const [toggle, setToggle] = useState(false)
   return (
 
-    <div key={review.id}>
+    <div className="max-w-sm bg-white rounded overflow-hidden shadow-lg my-6 px-6 py-4" key={review.id}>
       <h3>{review.title}</h3>
       <h4>Username: {review.user.username}</h4>
       <h5>{review.worth_it} stars</h5>
