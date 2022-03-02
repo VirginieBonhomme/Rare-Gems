@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { getOneSneaker } from '../Services/sneakers'
-import { getSneakerReviews, createReview, deleteReview, updateReview } from '../Services/reviews'
+import { getSneakerReviews, createReview, deleteReview } from '../Services/reviews'
 import Reviews from './ReviewScreens/Reviews'
 import ReviewCreate from './ReviewScreens/ReviewCreate'
 
@@ -55,15 +55,14 @@ export default function SneakerDetail(props) {
       {
         sneaker?.id ?
           <>
-            <div className="flex flex-wrap justify-center mt-20 p-10 items-center">
+            <div className="flex space-x-20 justify-center mt-20 p-10 items-center">
               <div>
-                <h2 className="font-normal hover:font-bold">{sneaker.name}</h2>
+                <h2 className="font-normal text-black text-4xl hover:font-bold">{sneaker.name}</h2>
                 <img className="object-scale-down h-96 w-full" src={sneaker.img_url} alt="" />
-                <h3>{sneaker.how_rare} Stars</h3>
               </div>
               <div>
-                <div className="max-w-lg mx-auto text-center p-5 lg:text-left lg:py-24">
-                  <div className="max-w-lg mx-auto bg-[#dadfe5] rounded-lg p-5 lg:text-left ">
+                <div className="max-w-lg  lg:px-8 mx-auto bg-[#dadfe5] mt-10 opacity-50 text-center p-5 lg:text-left rounded-lg  lg:py-24">
+                  <div className="max-w-lg mx-auto rounded-lg p-5 lg:text-left ">
                     <br />
                     <h3>How Rare: {sneaker.how_rare} Stars</h3>
                     <br />

@@ -4,11 +4,12 @@ import Navbar from '../Componets/Navbar/Navbar.jsx';
 function Layout(props) {
   return (
     <>
-      <Navbar />
       <main className="home-main">
+        <Navbar />
         {props.children}
+        <Footer />
       </main>
-      <Footer />
+
     </>
   )
 }

@@ -1,9 +1,12 @@
 import React from 'react'
+import Logo from '../assets/Octocat.png'
 
 function Footer() {
   return (
-    <footer class="text-center bg-gray-900 text-white container px-6 pt-6">
-      Rare Gems 2022
+    <footer className=" bg-black text-white h-24 justify-center">
+      <a href="https://github.com/virginiebonhomme">
+        <img src={Logo} height={80} width={80} />
+      </a>
     </footer>
   )
 }

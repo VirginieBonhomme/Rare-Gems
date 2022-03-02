@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { updateReview } from '../../Services/reviews'
 export default function ReviewEdit(props) {
   console.log(props)
@@ -42,28 +42,32 @@ export default function ReviewEdit(props) {
     }}>
       <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Review Title</label>
       <br />
-      <input className="block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      <input
+        className="w-full px-4 py-2 border-b-2 border-gray-400 outline-none  focus:border-gray-400"
         type='text'
         onChange={(e) => { setTitle(e.target.value) }}
         value={title}
       />
       <br />
-      <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Worth The Flip?</label>
+      <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Rate The Flip</label>
       <br />
-      <input className="block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      <input
+        className="w-full px-4 py-2 border-b-2 border-gray-400 outline-none  focus:border-gray-400"
         type='number'
         onChange={(e) => { setWorth_it(e.target.valueAsNumber) }}
         value={worth_it}
       />
       <br />
-      <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Review</label>
+      <label for="small-input" class="block mb-2 text-sm font-medium  text-gray-900 dark:text-gray-300">Review</label>
       <br />
-      <input className="block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      <input
+        className="w-full px-4 py-2 border-b-2 border-gray-400 outline-none  focus:border-gray-400"
         type='text'
         onChange={(e) => { setContent(e.target.value) }}
         value={content}
       />
-      <button>Edit</button>
+      <br />
+      <button className='mb-10'>Edit</button>
     </form>
   )
 }

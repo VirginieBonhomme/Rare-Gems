@@ -9,7 +9,6 @@ import Signup from './Componets/Signup';
 import HomeScreen from './Screens/HomeScreen';
 import SneakerDetail from './Screens/SneakerDetails';
 import ReviewEdit from './Screens/ReviewScreens/ReviewEdit'
-import ReviewCreate from './Screens/ReviewScreens/ReviewCreate';
 import Footer from './Componets/Footer';
 // import HomeScreen from './Screens/HomeScreen';
 

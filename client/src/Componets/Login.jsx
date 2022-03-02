@@ -9,34 +9,39 @@ export default function Login(props) {
   const navigate = useNavigate()
 
   return (
-    <form class="bg-black shadow-md rounded px-8 pt-6 pb-8 mt-40 flex flex-col" onSubmit={async (e) => {
-      e.preventDefault()
-      const user = {
-        username,
-        password
-      }
-      const resp = await loginUser(user)
-      props.setCurrentUser(resp)
+    <div max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2>
+      <form onSubmit={async (e) => {
+        e.preventDefault()
+        const user = {
+          username,
+          password
+        }
+        const resp = await loginUser(user)
+        props.setCurrentUser(resp)
 
-      navigate('/sneakers')
+        navigate('/sneakers')
 
-    }}>
-      <input
-        class="shadow appearance-none border mt-5 rounded w-full py-2 px-3 text-grey-darker" id="username"
-        type="text"
-        placeholder="Username"
-        onChange={(e) => setUsername(e.target.value)}
-        value={username} />
-      <input
-        class="shadow appearance-none border border-red mt-5 rounded w-full py-2 px-3 text-grey-darker mb-3"
-        id="password"
-        type="password"
-        placeholder="******************"
-        onChange={(e) => setPassword(e.target.value)}
-        value={password} />
-      <button
-        class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
-      >Login</button>
-    </form>
+      }}>
+        <input
+          className="w-1/3 px-4 py-2 border-b-2 border-gray-400 outline-none  focus:border-gray-400"
+          id="username"
+          type="text"
+          placeholder="Username"
+          onChange={(e) => setUsername(e.target.value)}
+          value={username} />
+        <br />
+        <input
+          class="w-1/3 px-4 py-2 border-b-2 border-gray-400 outline-none  focus:border-gray-400"
+          id="password"
+          type="password"
+          placeholder="******************"
+          onChange={(e) => setPassword(e.target.value)}
+          value={password} />
+        <br />
+        <button
+          className="bg-[#06b6d4] text-white font-bold py-2 px-4 rounded"
+        >Login</button>
+      </form>
+    </div>
   )
 }
