@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className=" bg-black text-white h-24 justify-center">
       <a href="https://github.com/virginiebonhomme">
-        <img src={Logo} height={80} width={80} />
+        <img src={Logo} height={80} width={80} alt='logo' />
       </a>
     </footer>
   )

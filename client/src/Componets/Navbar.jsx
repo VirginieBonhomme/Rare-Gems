@@ -8,7 +8,7 @@ export default function Navbar(props) {
       <div className='flex-row-reverse'>
         <Link
           to='/sneakers'>
-          <img src={Logo} height={120} width={120} />
+          <img src={Logo} height={120} width={120} alt='logo' />
         </Link>
 
       </div>

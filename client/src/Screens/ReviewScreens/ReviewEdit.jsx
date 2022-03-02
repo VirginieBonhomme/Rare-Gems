@@ -20,7 +20,7 @@ export default function ReviewEdit(props) {
       setWorth_it(foundReview.worth_it)
       setContent(foundReview.content)
     }
-  }, [id, props.reviews])
+  }, [id, props.reviews, review])
 
 
   const handleEdit = async (sneaker_id, review_id, reviewData) => {
