@@ -25,16 +25,21 @@ export default function Register(props) {
 
       }}>
         <input
-          className="w-1/3 px-4 py-2 border-b-2 border-gray-400 outline-none  focus:border-gray-400"
+          placeholder='Username'
+          className="w-full px-4 py-2 border-b-2 border-gray-400 outline-none  focus:border-gray-400"
           type='text'
           onChange={(e) => setUsername(e.target.value)} value={username} />
         <br />
         <input
-          className="w-1/3 px-4 py-2 border-b-2 border-gray-400 outline-none  focus:border-gray-400"
+          placeholder='Email'
+          className="w-full px-4 py-2 border-b-2 border-gray-400 outline-none  focus:border-gray-400"
           type='text'
           onChange={(e) => setEmail(e.target.value)} value={email} />
         <br />
-        <input type='password'
+        <input
+          placeholder='Password'
+          className="w-full px-4 py-2 border-b-2 text-black border-gray-400 outline-none  focus:border-gray-400"
+          type='password'
           onChange={(e) => setPassword(e.target.value)} value={password} />
         <br />
         <button className="bg-[#06b6d4] text-white font-bold py-2 px-4 rounded">Sign Up</button>
