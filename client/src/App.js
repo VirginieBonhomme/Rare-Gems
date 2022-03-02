@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { verifyUser } from './Services/users.js';
 import SneakersContainer from './Containers/SneakerContainer.jsx';
 import Navbar from './Componets/Navbar';
@@ -38,7 +38,7 @@ function App() {
     <div className="App">
       <Navbar currentUser={currentUser} logout={logout} />
       <Routes>
-        <Route path='/' element={<HomeScreen />} />
+        <Route path='/' element={<Navigate replace to='/Sneakers' />} />
         <Route path='/login' element={<Login setCurrentUser={setCurrentUser} />} />
         <Route path='/signup' element={<Signup setCurrentUser={setCurrentUser} />} />
         <Route path='/Sneakers/*' element={<SneakersContainer currentUser={currentUser} />} />
