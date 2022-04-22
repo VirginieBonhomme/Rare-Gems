@@ -1,6 +1,6 @@
 # Rare-Gems
 
-[Live Demo](https://wonderful-mcclintock-cd0696.netlify.app/sneakers)
+[Live Demo Link](https://wonderful-mcclintock-cd0696.netlify.app/sneakers)
 
 - [Overview](#overview)
 - [MVP](#mvp)
