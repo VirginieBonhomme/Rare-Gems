@@ -133,13 +133,13 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Create Seed Data    |    L     |     5 hrs      |     TBD       |     TBD     |
-| Create CRUD Actions |    H     |     5 hrs      |     TBD       |     TBD     |
-| Frontend Components |    L     |     5 hrs      |     TBD       |     TBD     |
-| Create CRUD Actions |    H     |     5 hrs      |     TBD       |     TBD     |
-| Responisveness      |    L     |     5 hrs      |     TBD       |     TBD     |
-| Styling             |    H     |     5 hrs      |     TBD       |     TBD     |
-| TOTAL               |          |     30 hrs     |     3 hrs     |     TBD     |
+| Create Seed Data    |    L     |     5 hrs      |     4 hrs     |    4 hrs    |
+| Create CRUD Actions |    H     |     5 hrs      |     6 hrs     |    7 hrs    |
+| Frontend Components |    L     |     5 hrs      |     5 hrs     |    7 hrs    |
+| Create CRUD Actions |    H     |     5 hrs      |     4 hrs     |    5 hrs    |
+| Responisveness      |    L     |     5 hrs      |     4 hrs     |    5 hrs    |
+| Styling             |    H     |     5 hrs      |     5 hrs     |    5 hrs    |
+| TOTAL               |          |     30 hrs     |     28 hrs    |    33 hrs   |
 
 <br>
 
@@ -147,21 +147,14 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+
 
 [ERD Sample](https://drive.google.com/file/d/1J50gW4EPcdDW5rsJMsgW_NeeSqiWVdLL/view?usp=sharing)
 <br>
 
-***
-
-## Post-MVP
 
 
-***
-
-## Code Showcase
 
 
-## Code Issues & Resolutions
 
 
