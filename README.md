@@ -91,6 +91,16 @@ The **Rare Gems** MVP is to make a full CRUD application both on the frontend an
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
+![Rare Gems](https://github.com/user-attachments/assets/c8b7cdd7-75c0-45a1-ad32-5f33564fa9d0)
+
+![Raregems2](https://github.com/user-attachments/assets/4b28dfe4-1955-41b2-b546-b4b748b01319)
+
+![RGmoblie2](https://github.com/user-attachments/assets/849d8280-3fb9-4be8-bfe4-a9498b0c6d3d)
+
+
+![RGmobie](https://github.com/user-attachments/assets/981820b1-5f01-484b-a9e8-dcdcd6370537)
+
+
 [Figma_Design](https://www.figma.com/file/JTkW27ssKKz5HH2N296WXh/Rare-Gems?node-id=0%3A1)
 
 #### Component Tree
