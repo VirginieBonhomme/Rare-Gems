@@ -1,21 +1,16 @@
 # Rare-Gems
 
-<!-- [Live Demo Link](https://wonderful-mcclintock-cd0696.netlify.app/sneakers) -->
-
 - [Overview](#overview)
 - [MVP](#mvp)
+- - [Wireframes](#wireframes)
   - [Goals](#goals)
   - [Libraries and Dependencies](#libraries-and-dependencies)
   - [Client (Front End)](#client-front-end)
-    - [Wireframes](#wireframes)
     - [Component Tree](#component-tree)
     - [Component Architecture](#component-architecture)
     - [Time Estimates](#time-estimates)
   - [Server (Back End)](#server-back-end)
     - [ERD Model](#erd-model)
-- [Post-MVP](#post-mvp)
-- [Code Showcase](#code-showcase)
-- [Code Issues & Resolutions](#code-issues--resolutions)
 
 <br>
 
@@ -39,6 +34,23 @@ The **Rare Gems** MVP is to make a full CRUD application both on the frontend an
   - Utilize **Rails** to define models for interacting with the database.
   - Implement working controller actions for Full CRUD (`index`, `show`, `create`, `update`, `delete`) between non-User tables 
    
+### Client (Front End)
+
+#### Wireframes
+
+
+![Rare Gems](https://github.com/user-attachments/assets/c8b7cdd7-75c0-45a1-ad32-5f33564fa9d0)
+
+![Raregems2](https://github.com/user-attachments/assets/4b28dfe4-1955-41b2-b546-b4b748b01319)
+
+![RGmoblie2](https://github.com/user-attachments/assets/849d8280-3fb9-4be8-bfe4-a9498b0c6d3d)
+
+
+![RGmobie](https://github.com/user-attachments/assets/981820b1-5f01-484b-a9e8-dcdcd6370537)
+
+
+[Figma_Design](https://www.figma.com/file/JTkW27ssKKz5HH2N296WXh/Rare-Gems?node-id=0%3A1)
+
 
 ### Client (Front End) <!-- omit in toc -->
 
@@ -85,22 +97,6 @@ The **Rare Gems** MVP is to make a full CRUD application both on the frontend an
 
 <br>
 
-### Client (Front End)
-
-#### Wireframes
-
-
-![Rare Gems](https://github.com/user-attachments/assets/c8b7cdd7-75c0-45a1-ad32-5f33564fa9d0)
-
-![Raregems2](https://github.com/user-attachments/assets/4b28dfe4-1955-41b2-b546-b4b748b01319)
-
-![RGmoblie2](https://github.com/user-attachments/assets/849d8280-3fb9-4be8-bfe4-a9498b0c6d3d)
-
-
-![RGmobie](https://github.com/user-attachments/assets/981820b1-5f01-484b-a9e8-dcdcd6370537)
-
-
-[Figma_Design](https://www.figma.com/file/JTkW27ssKKz5HH2N296WXh/Rare-Gems?node-id=0%3A1)
 
 #### Component Tree
 
